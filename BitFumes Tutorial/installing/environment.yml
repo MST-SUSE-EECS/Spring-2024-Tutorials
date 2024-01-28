@@ -1,0 +1,6 @@
+name: fastapi_bitfumes_tutorial
+dependencies:
+ - pip
+ - pip:
+   - fastapi
+   - uvicorn

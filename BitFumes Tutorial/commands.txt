@@ -1,0 +1,11 @@
+python -m venv venv
+#linux
+source venv/bin/activate
+#windows
+source venv/Scripts/activate
+
+#or 
+mamba env create --file environment.yml
+conda activate fastapi_bitfumes_tutorial
+
+uvicorn main:app --reload
