@@ -1,14 +1,12 @@
+from typing import List
 from pydantic import BaseModel
 
 #schema for attributes in a blog
-class Blog(BaseModel):
-    title: str
-    body: str 
-    
-#schema for showable items in a blog
-class ShowBlog(BaseModel):
+class BlogBase(BaseModel):
     title: str
     body: str
+    
+class Blog(BlogBase):
     class Config():
         from_attributes = True
 
@@ -20,6 +18,12 @@ class User(BaseModel):
 class ShowUser(BaseModel):
     name: str 
     email: str
-    
+    blogs: List[Blog] = []
     class Config():
         from_attributes = True     
+    
+#schema for showable items in a blog
+class ShowBlog(BaseModel):
+    title: str
+    body: str
+    creator: ShowUser
