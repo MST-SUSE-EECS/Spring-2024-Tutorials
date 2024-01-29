@@ -5,3 +5,5 @@ dependencies:
    - fastapi
    - uvicorn
    - sqlalchemy
+   - passlib
+   - bcrypt
