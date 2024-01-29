@@ -9,3 +9,9 @@ mamba env create --file environment.yml
 conda activate fastapi_bitfumes_tutorial
 
 uvicorn main:app --reload
+
+#swagger ui
+http://127.0.0.1:8000/docs#/
+
+#redoc
+http://127.0.0.1:8000/redoc
