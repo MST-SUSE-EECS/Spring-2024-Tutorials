@@ -143,10 +143,9 @@ dmypy.json
 # generated hash file
 admin_files/hashes.txt
 
-**/IoTStack/*
-
 # Added by cargo
 #
 # already existing elements were commented out
 
 #/target
+**/IoTStack/
